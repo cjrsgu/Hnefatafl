@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart' as prefix0;
+import 'package:hnefatafl/pages/home.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -63,6 +65,10 @@ class _LoginPageState extends State<LoginPage> {
           email: _email,
           password: _password,
         );
+
+        Navigator.push(context, MaterialPageRoute(
+          builder: (context) => Home(user: user.user),
+        ));
         print(user.user.toString());
       } catch(e){
         print(e.toString());
