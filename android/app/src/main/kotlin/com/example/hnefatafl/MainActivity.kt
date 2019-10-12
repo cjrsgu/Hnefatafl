@@ -1,4 +1,4 @@
-package com.example.hnefatafl
+package com.cjvnjde.hnefatafl
 
 import android.os.Bundle
 
